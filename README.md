@@ -1,4 +1,24 @@
 # CloudGuard — Cloud Security Posture Management Dashboard
+
+**Live Demo:** [Launch CloudGuard Dashboard](https://prateek235689-cyber.github.io/CloudGuard-Cloud-security-Posture-Management/)
+**Project Repository:** [View Source Code on GitHub](https://github.com/prateek235689-cyber/CloudGuard-Cloud-security-Posture-Management)
+
+CloudGuard is a cloud security posture management dashboard prototype designed to help security teams review simulated cloud misconfigurations, prioritize findings by severity, track remediation status, and export findings to CSV.
+
+### Key Features
+- Security overview and risk metrics
+- Searchable and filterable security findings
+- Severity and remediation-status tracking
+- Status persistence in the browser
+- CSV export for security findings
+- Responsive dashboard interface
+
+### Technology
+HTML · CSS · JavaScript · GitHub Pages
+
+**Note:** This is a portfolio demonstration using simulated findings. It does not perform live AWS security scans.
+
+# CloudGuard — Cloud Security Posture Management Dashboard
 CloudGuard is a lightweight, interactive Cloud Security Posture Management (CSPM) dashboard prototype designed to demonstrate cloud security finding triage, risk visibility, and remediation tracking.
 
 ## Project Overview:
