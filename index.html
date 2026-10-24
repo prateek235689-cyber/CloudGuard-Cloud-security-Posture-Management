@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CloudGuard cloud security posture management dashboard">
+  <title>CloudGuard | Cloud Security</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#overview">
+      <span class="brand-icon">C</span>
+      <span><strong>CloudGuard</strong><small>Cloud Security Platform</small></span>
+    </a>
+    <span class="environment">DEMO ENVIRONMENT</span>
+  </header>
+
+  <div class="app-layout">
+    <aside class="sidebar">
+      <p class="nav-label">WORKSPACE</p>
+      <a class="nav-link active" href="#overview">▦ Overview</a>
+      <a class="nav-link" href="#findings">⌕ Security Findings</a>
+      <a class="nav-link" href="#assessment">◈ Assessment</a>
+      <div class="sidebar-note">
+        <span class="status-dot"></span>
+        <div><strong>Demo mode</strong><small>No cloud account connected</small></div>
+      </div>
+    </aside>
+
+    <main>
+      <section class="welcome" id="overview">
+        <p class="eyebrow">SECURITY OPERATIONS</p>
+        <h1>Cloud Security Overview</h1>
+        <p>Identify risks, prioritize findings, and improve your cloud security posture.</p>
+      </section>
+
+      <section class="metrics" aria-label="Security metrics">
+        <article class="metric-card critical">
+          <p>Open Critical Findings</p><strong id="critical-count">0</strong>
+          <span>Require immediate attention</span>
+        </article>
+        <article class="metric-card high">
+          <p>Open High-Risk Findings</p><strong id="high-count">0</strong>
+          <span>High-priority security risks</span>
+        </article>
+        <article class="metric-card resources">
+          <p>Resources Assessed</p><strong id="resource-count">0</strong>
+          <span>Unique demo resources</span>
+        </article>
+        <article class="metric-card resolved">
+          <p>Resolved Findings</p><strong id="resolved-count">0</strong>
+          <span>Marked as resolved</span>
+        </article>
+      </section>
+
+      <section class="panel" id="assessment">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">ASSESSMENT STATUS</p>
+            <h2>Security Assessment</h2>
+          </div>
+          <span class="status-pill"><span class="status-dot"></span> Sample data loaded</span>
+        </div>
+        <p class="panel-description">
+          Demonstration findings model common cloud misconfigurations.
+          These results are simulated and are not live AWS scan results.
+        </p>
+      </section>
+
+      <section class="panel findings-panel" id="findings">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">RISK MANAGEMENT</p>
+            <h2>Security Findings</h2>
+          </div>
+          <span class="count-pill" id="finding-count">0 findings</span>
+        </div>
+
+        <div class="filters">
+       <input id="search-input" type="search"
+    placeholder="Search findings, resources, or services..."
+    aria-label="Search security findings">
+        <select id="severity-filter" aria-label="Filter by severity">
+         <option value="All">All severities</option>
+         <option value="Critical">Critical</option>
+         <option value="High">High</option>
+         <option value="Medium">Medium</option>
+         <option value="Low">Low</option>
+        </select>
+  
+        <select id="status-filter" aria-label="Filter by status">
+    <option value="All">All statuses</option>
+    <option value="Open">Open</option>
+    <option value="In Progress">In Progress</option>
+    <option value="Resolved">Resolved</option>
+  </select>
+  <button id="export-button" type="button">Export Findings CSV</button>
+</div>
+
+<div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Finding</th>
+                <th>Severity</th>
+                <th>Service / Resource</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="findings-body"></tbody>
+          </table>
+        </div>
+        <p class="table-note">Change a finding's status using its dropdown. Metrics update automatically.</p>
+      </section>
+
+      <footer>
+        <p>CloudGuard · Cloud Security Portfolio Project</p>
+        <p>Simulated assessment data · No live cloud connection</p>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
