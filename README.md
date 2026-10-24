@@ -67,6 +67,7 @@ Potential future enhancements:
 - Add authentication and role-based access controls.
 - Introduce severity trends, remediation deadlines, and audit history.
 - Add automated testing and deployment workflows.
+  
 
 ## Project Purpose:
 CloudGuard demonstrates foundational skills in cloud security concepts, front-end development, finding triage, security reporting, and technical documentation.
